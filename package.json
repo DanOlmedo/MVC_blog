@@ -1,0 +1,23 @@
+{
+  "name": "mvc_blog",
+  "version": "1.0.0",
+  "description": "MVC controlled blog page",
+  "main": "server.js",
+  "scripts": {
+    "test": "start",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanOlmedo/MVC_blog.git"
+  },
+  "keywords": [
+    "MVC"
+  ],
+  "author": "DanOlmedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanOlmedo/MVC_blog/issues"
+  },
+  "homepage": "https://github.com/DanOlmedo/MVC_blog#readme"
+}
