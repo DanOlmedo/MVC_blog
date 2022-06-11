@@ -16,10 +16,12 @@ header {
     background-color: rgb(63, 61, 60);
 }
 
-.nav1 h2 {
+.nav1 button {
     margin: 1rem;
     margin-left: 3rem;
     margin-right: 3rem;
+    font-size: 3rem;
+    background-color: blue;
 }
 
 .main1 {
