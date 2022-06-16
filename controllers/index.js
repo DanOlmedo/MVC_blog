@@ -22,15 +22,14 @@ router.get('/all', async (req,res) => {
     res.render('all', { blogs })
 })
 
-router.post('/singup', async (req,res) => {
-    const newUser = new User.create(req.body).catch((err) => {
-        res.json(err);
-    })
+router.post('/signup', async (req,res) => {
+    const newUser = await User.create(req.body)
     req.session.save(() => {
-        req.session.user.id = newUser.id;
-        req.session.user.username = newUser.username;
-        req.sessions.login = true;
-        res.json(newUser);
+            // newUser.id = req.session.user.id; 
+        //  req.session.user.username = newUser.username;
+        //  req.sessions.login = true;
+        //  res.json(newUser);    
+            res.json(newUser)
     })
 })
 

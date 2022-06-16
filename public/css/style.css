@@ -1,19 +1,31 @@
 :root {
-
+    --darkGreen: #062C30;
+    --paleGreen: #05595B;
+    --paleYellow: #E2D784;
+    --paleCream: #F5F5F5;
 }
 
 body {
-    background-color: cadetblue !important;
+    background-color: var(--paleCream) !important;
 }
 
 header {
-    background-color: cornsilk;
+    display: flex;
+    justify-content: center;
+    background-color: var(--paleGreen);
+    
+}
+
+header h1 {
+    font-size: 4rem;
+    color: var(--paleCream);
+    margin-top: 1rem;
 }
 
 .nav1 {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(63, 61, 60);
+    background-color: var(--paleGreen);
 }
 
 .nav1 button {
@@ -21,17 +33,28 @@ header {
     margin-left: 3rem;
     margin-right: 3rem;
     font-size: 3rem;
-    background-color: blue;
+    background-color: var(--darkGreen);
+    color: var(--paleCream);
+    border-radius: 20%;
 }
 
 .main1 {
     display: flex;
-    justify-content: space-evenly;
-    background-color: blue;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkGreen);
 }
 
 .main1 .blog {
-    background-color: burlywood;
+    background-color: var(--paleGreen);
     font-size: 4rem;
-    margin: 1rem;
+    margin: 2rem;
+    margin-top: 3rem;
+    width: 70%;
+    padding: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: var(--paleCream);
+    border-radius: 10%;
 }
