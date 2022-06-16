@@ -1,8 +1,12 @@
 [
     {
-    "id" : 1
+    "id" : 1,
+    "author" : "Dan",
+    "content" : "Test text content for blog number 1"
     },
     {
-    "id" : 2
+    "id" : 2,
+    "author" : "Daniel",
+    "content" : "Test text content for blog number 2"
     }
 ]

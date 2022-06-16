@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Blog = require('../models/Blog');
+const User = require('../models/User');
 
 const test1 = [
     {
@@ -19,6 +20,18 @@ router.get('/all', async (req,res) => {
     });
     const blogs = blogData.map((blog) => blog.get({ plain: true}));
     res.render('all', { blogs })
+})
+
+router.post('/singup', async (req,res) => {
+    const newUser = new User.create(req.body).catch((err) => {
+        res.json(err);
+    })
+    req.session.save(() => {
+        req.session.user.id = newUser.id;
+        req.session.user.username = newUser.username;
+        req.sessions.login = true;
+        res.json(newUser);
+    })
 })
 
 module.exports = router;
