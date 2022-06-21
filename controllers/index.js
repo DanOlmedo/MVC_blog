@@ -26,6 +26,11 @@ router.get('/signup', async (req,res) => {
 
 })
 
+router.get('/dashboard', async (req,res) => {
+    res.render('dashboard')
+
+})
+
  router.get('/all', async (req,res) => {
      const blogData = await Blog.findAll().catch((err) => {
          res.json(err);

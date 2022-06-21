@@ -13,7 +13,7 @@ homeBtn.addEventListener('click', () => {
 
 dashBtn.addEventListener('click', () => {
     console.log('Dashboard button')
-    // window.location.href = "http://localhost:3001/dasboard";
+    window.location.href = "http://localhost:3001/dashboard";
 });
 
 loginBtn.addEventListener('click', () => {
