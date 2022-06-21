@@ -7,6 +7,8 @@ const signupBtn = document.querySelector('#signupBtn');
 
 homeBtn.addEventListener('click', () => {
     console.log('Home button')
+    window.location.href = "http://localhost:3001/";
+
 });
 
 dashBtn.addEventListener('click', () => {
@@ -19,4 +21,6 @@ loginBtn.addEventListener('click', () => {
 
 signupBtn.addEventListener('click', () => {
     console.log('Sign up button')
+    window.location.href = "http://localhost:3001/signup";
+
 })
