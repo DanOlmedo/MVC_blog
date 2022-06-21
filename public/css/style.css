@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: var(--paleCream) !important;
+    background-color: var(--paleGreen) !important;
 }
 
 header {
@@ -56,5 +56,15 @@ header h1 {
     padding-left: 4rem;
     padding-right: 4rem;
     color: var(--paleCream);
-    border-radius: 10%;
+    border-radius: 10%; 
+}
+
+#submitBtn {
+    margin: 2rem;
+    margin-bottom: 5rem;
+}
+
+.form-label {
+    margin: 2rem;
+    margin-top: 4rem;
 }

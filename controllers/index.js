@@ -9,18 +9,29 @@ const test1 = [
     }
 ]
 
-router.get('/',  (req,res) => {
-    console.log(test1)
-    res.render('main')
-})
-
-router.get('/all', async (req,res) => {
+router.get('/', async (req,res) => {
     const blogData = await Blog.findAll().catch((err) => {
         res.json(err);
     });
     const blogs = blogData.map((blog) => blog.get({ plain: true}));
     res.render('all', { blogs })
 })
+
+router.get('/login', async (req,res) => {
+    res.render('login')
+})
+
+router.get('/signup', async (req,res) => {
+    res.render('signup')
+})
+
+// router.get('/all', async (req,res) => {
+//     const blogData = await Blog.findAll().catch((err) => {
+//         res.json(err);
+//     });
+//     const blogs = blogData.map((blog) => blog.get({ plain: true}));
+//     res.render('all', { blogs })
+// })
 
 router.post('/signup', async (req,res) => {
     const newUser = await User.create(req.body)
@@ -30,6 +41,7 @@ router.post('/signup', async (req,res) => {
         //  req.sessions.login = true;
         //  res.json(newUser);    
             res.json(newUser)
+            console.log(req.session)
     })
 })
 

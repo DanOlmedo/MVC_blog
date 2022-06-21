@@ -17,13 +17,14 @@
 
 <div class="main1">
 
-    {{#each blogs as |blog|}}
-
-        <div class="blog">
-             {{blog.author}}
-             {{blog.content}}
-        </div>
-
-    {{/each}}
+    <div class="mb-3">
+  <label for="Input1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="Input1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="Input2" class="form-label">Password</label>
+  <input type="password" class="form-control" id="Input2" placeholder="Password">
+</div>
+<button id="submitBtn">Log In</button>
 
 </div>

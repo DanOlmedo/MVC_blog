@@ -10,24 +10,24 @@ const sequelize = require('./config/connection');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// const userSession = {
-//   secret: 'secret key',
-//   cookie: { },
-//   saveUninitialized: true,
-//   store: new sequelizeStore({
-//     db: sequelize
-//   })
-// }
+ const userSession = {
+   secret: 'secret key',
+   cookie: { },
+   saveUninitialized: true,
+   store: new sequelizeStore({
+     db: sequelize
+   })
+ }
 
-// app.use(sessions(userSession));
+ app.use(session(userSession));
 
-const sess = {
-  secret: 'Super secret secret',
-  resave: false,
-  saveUninitialized: false,
-};
+// const sess = {
+//   secret: 'Super secret secret',
+//   resave: false,
+//   saveUninitialized: false,
+// };
 
-app.use(session(sess));
+// app.use(session(sess));
 
 const hbs = exphbs.create({});
 
