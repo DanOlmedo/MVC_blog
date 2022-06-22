@@ -14,16 +14,23 @@
             </div>
         </main>
     </div>
-
-<div class="main1">
+<div class="mainBack">
+<div class="main1All">
 
     {{#each blogs as |blog|}}
 
         <div class="blog">
+            <div id="author">
              {{blog.author}}
+             </div>
+             <div id="content">
              {{blog.content}}
+             </div>
+
+             <button id="commentBtn">Comment</button>
         </div>
 
     {{/each}}
 
+</div>
 </div>

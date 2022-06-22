@@ -5,15 +5,12 @@
     --paleCream: #F5F5F5;
 }
 
-body {
-    background-color: var(--paleGreen) !important;
-}
 
 header {
     display: flex;
     justify-content: center;
     background-color: var(--paleGreen);
-    
+    padding-bottom: 2rem;
 }
 
 header h1 {
@@ -34,8 +31,14 @@ header h1 {
     margin-right: 3rem;
     font-size: 3rem;
     background-color: var(--darkGreen);
-    color: var(--paleCream);
-    border-radius: 20%;
+    color: #F66B0E;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.mainBack{
+    display: flex;
+    justify-content: center;
 }
 
 .main1 {
@@ -44,19 +47,36 @@ header h1 {
     justify-content: center;
     align-items: center;
     background-color: var(--darkGreen);
+    padding-bottom: 5rem;
+    width: 85%;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5rem;
 }
 
-.main1 .blog {
+.main1All {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkGreen);
+    padding-bottom: 5rem;
+    width: 90%;
+}
+
+
+
+.main1All .blog {
     background-color: var(--paleGreen);
     font-size: 4rem;
     margin: 2rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
     width: 70%;
     padding: 1rem;
     padding-left: 4rem;
     padding-right: 4rem;
     color: var(--paleCream);
-    border-radius: 10%; 
+    border-radius: 3rem;
 }
 
 #submitBtn {
@@ -71,4 +91,54 @@ header h1 {
 
 #dash {
     color: #F5F5F5;
+}
+
+#logInAccBtn {
+    margin: 2rem;
+    border-radius: 20%;
+    font-size: 2.5rem;
+    padding: 1rem;
+    background-color:#F66B0E;
+    font-weight: bold;
+    color: #F5F5F5;
+}
+
+#signUpAccBtn {
+    margin: 2rem;
+    border-radius: 20%;
+    font-size: 2.5rem;
+    padding: 1rem;
+    background-color:#F66B0E;
+    font-weight: bold;
+    color: var(--paleCream);
+}
+
+#commentBtn {
+    margin: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-color:#F66B0E;
+    font-weight: bold;
+}
+
+#input1 {
+    font-size: 2.5rem;
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+#input2 {
+    font-size: 2.5rem;
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+#author {
+    font-size: 3.5rem;
+    color: #F66B0E;
+}
+
+#content {
+    font-size: 2.5rem;
 }
