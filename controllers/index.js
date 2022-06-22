@@ -1,6 +1,17 @@
 const router = require('express').Router();
 const Blog = require('../models/Blog');
 const User = require('../models/User');
+const express = require('express');
+var bodyParser = require('body-parser')
+
+
+router.use(express.json());
+router.use(express.urlencoded({ extended: false }));
+router.use(bodyParser.urlencoded({ extended: false }))
+router.use(bodyParser.json())
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var jsonParser = bodyParser.json()
 
 const test1 = [
     {
@@ -39,8 +50,8 @@ router.get('/dashboard', async (req,res) => {
      res.render('all', { blogs })
  })
 
-router.post('/signup', async (req,res) => {
-    const newUser = await User.create(req.body)
+router.post('/signup', jsonParser, async (req,res) => {
+    // const newUser = await User.create(req.body)
     // req.session.save(() => {
     //     //   newUser.id = req.session.user.id; 
     //     //   req.session.user.username = newUser.username;
@@ -49,8 +60,15 @@ router.post('/signup', async (req,res) => {
     //         res.json(newUser)
     //         console.log(req.session)
     // })
-    console.log(req.body)
-    res.send(`test`)
+    // req.body.username = "test"
+    
+    // req.send(req.query)
+    // res.send(req.headers)
+    // res.send(req.protocol)
+
+    res.send(req.body);
+    console.log(test1)
+    
 })
 
 module.exports = router;

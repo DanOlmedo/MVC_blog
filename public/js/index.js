@@ -5,6 +5,18 @@ const dashBtn = document.querySelector('#dashBtn');
 const loginBtn = document.querySelector('#loginBtn');
 const signupBtn = document.querySelector('#signupBtn');
 
+const form = document.getElementById('signUpAccBtn');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    var username = document.querySelector('#Input1').value
+    let password = document.querySelector('#Input2').value
+
+    console.log(username);
+    console.log(password);
+});
+
 homeBtn.addEventListener('click', () => {
     console.log('Home button')
     window.location.href = "http://localhost:3001/";
