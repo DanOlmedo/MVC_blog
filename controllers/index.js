@@ -53,7 +53,7 @@ router.post('/signup', async (req,res) => {
     
     try {
         const newUser = await User.create(req.body)
-    req.session.save(() => {
+          req.session.save(() => {
           req.session.user_id = newUser.id; 
           req.session.username = newUser.username;
           req.session.login = true;
@@ -94,7 +94,7 @@ router.post('/login', async (req,res) => {
 
     }
     catch (err) {
-        res.status(500).json(err)
+        res.status(500).json(err)  
     }
 })
 
