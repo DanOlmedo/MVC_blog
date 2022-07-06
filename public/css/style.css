@@ -142,3 +142,7 @@ header h1 {
 #content {
     font-size: 2.5rem;
 }
+
+.newPostBlock {
+    display: none;
+}
