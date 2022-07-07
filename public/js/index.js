@@ -7,7 +7,7 @@ const dashBtn = document.querySelector('#dashBtn');
 const loginBtn = document.querySelector('#loginBtn');
 const signupBtn = document.querySelector('#signupBtn');
 
-const form = document.getElementById('signUpAccBtn');
+const form = document.querySelector('#signUpAccBtn');
 
 form.addEventListener('click', async (event) => {
     event.preventDefault();
@@ -57,24 +57,21 @@ loginForm.addEventListener('click', async (event) => {
     }
 });
 
-// homeBtn.addEventListener('click', () => {
-//     console.log('Home button')
-//     window.location.href = "http://localhost:3001/";
+const newPost = document.getElementById('newBlogPost');
 
-// });
+newPost.addEventListener('click', async (event) => {
+    event.preventDefault();
 
-// dashBtn.addEventListener('click', () => {
-//     console.log('Dashboard button')
-//     window.location.href = "http://localhost:3001/dashboard";
-// });
+    var blogger = document.querySelector('#blogger').value
+    let blogContent = document.querySelector('#blogContent').value
+    console.log(blogger);
+    console.log(blogContent)
+    if (postResponse.ok) {
+        document.location.replace('/newBlog')
+    }
+    else {
+        alert('Failed to post')
+    }
 
-// loginBtn.addEventListener('click', () => {
-//     console.log('Login button')
-//     window.location.href = "http://localhost:3001/login";
-// });
+});
 
-// signupBtn.addEventListener('click', () => {
-//     console.log('Sign up button')
-//     window.location.href = "http://localhost:3001/signup";
-
-// })
