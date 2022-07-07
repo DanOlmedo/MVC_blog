@@ -3,12 +3,9 @@ const Blog = require('../models/Blog');
 
 router.post('/newBlog', async (req, res) => {
 
-    const newBlog = await Blog.create({
-        author: req.body.author,
-        content: req.body.content
-    })
-        .then((newBlog) => {
-            res.json(newBlog)
+    await Blog.create(req.body)
+        .then((blog) => {
+            res.json(blog)
         })
         .catch((err) => {
             res.json(err);
