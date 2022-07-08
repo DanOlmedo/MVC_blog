@@ -64,8 +64,6 @@ header h1 {
     width: 90%;
 }
 
-
-
 .main1All .blog {
     background-color: var(--paleGreen);
     font-size: 4rem;
@@ -77,6 +75,11 @@ header h1 {
     padding-right: 4rem;
     color: var(--paleCream);
     border-radius: 3rem;
+}
+
+.main1All #newComment {
+    font-size: 1.5rem;
+    width: 50%;
 }
 
 #submitBtn {
@@ -144,5 +147,34 @@ header h1 {
 }
 
 .newPostBlock {
-    
+    background-color: var(--paleGreen);
+    font-size: 2rem;
+    margin: 2rem;
+    margin-top: 4rem;
+    width: 70%;
+    padding: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: var(--paleCream);
+    border-radius: 3rem;
+}
+
+#newBlogPost {
+    margin: 1rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    padding: 0.75rem;
+    background-color:#F66B0E;
+    font-weight: bold;
+}
+
+.newPostBlock h1 {
+    margin: 1rem;
+    color: #F66B0E;
+    font-size: 3rem;
+}
+
+.newPostBlock #blogContent {
+    width: 100%;
+    height: 8rem;
 }

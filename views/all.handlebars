@@ -12,16 +12,19 @@
              {{blog.content}}
              </div>
 
+             <form id="newComment">
+             <input type="text" name="newComment" id="newComment">
              <button id="commentBtn">Comment</button>
+             </form>
         </div>
 
     {{/each}}
 
 <div class="newPostBlock">
     <form id="newPostForm"> 
-<h1>Blog User</h1>
+<h1>Username</h1>
 <input type="text" name="blogger" id="blogger">
-<h1>Blog content</h1>
+<h1>What's on your mind?</h1>
 <input type="text" name="blogContent" id="blogContent">
 <button id="newBlogPost">Post</button>
     </form>
