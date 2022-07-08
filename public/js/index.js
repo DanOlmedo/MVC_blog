@@ -1,5 +1,7 @@
 // Front end script
 
+alert('Hello, comments are yet to be programmed but feel free to add a new post at the bottom of the home page :)')
+
 // const form = document.querySelector('#signUpAccBtn');
 
 // form.addEventListener('click', async (event) => {
